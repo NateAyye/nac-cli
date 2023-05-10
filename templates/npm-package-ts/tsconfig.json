@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "ES6"],
+    "module": "CommonJS",
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "strict": true,
+    "typeRoots": ["./dist/index.d.ts", "node_modules/@types"],
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "outDir": "lib",
+    "rootDir": "src",
+    "emitDeclarationOnly": false,
+    "forceConsistentCasingInFileNames": true,
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true
+  },
+
+  "include": [
+    "src/**/*"
+    // "lib/index.d.ts" // declaration file path
+  ]
+}

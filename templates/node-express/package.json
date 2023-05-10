@@ -1,0 +1,28 @@
+{
+	"name": "node-express-base",
+	"version": "0.0.1",
+	"description": "Express Node",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server",
+		"dev": "nodemon server"
+	},
+	"author": "Nathan Cuevas",
+	"license": "MIT",
+	"engines": {
+		"node": "18.x"
+	},
+	"dependencies": {
+		"bcrypt": "^5.1.0",
+		"cookie-parser": "^1.4.5",
+		"date-fns": "^2.23.0",
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"jsonwebtoken": "^9.0.0",
+		"uuid": "^8.3.2"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.12"
+	}
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ts-node-setup",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "ts-types": "tsc",
+    "build": "tsup",
+    "build:dev": "rimraf lib && tsup --watch",
+    "build:prod": "rimraf dist && env NODE_ENV=production tsup",
+    "build:watch": "tsup --watch",
+    "lint": "tsc",
+    "lint:fix": "eslint ./src --ext .ts --quiet --fix --ignore-path ./.gitignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{ts,css,md,json}\" ",
+    "lint:all": "yarn lint:format && yarn lint:fix ",
+    "ci": "npm run lint && npm run test && npm run build",
+    "release": "npm run lint && npm run test && npm run build:prod && changeset publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.1.0",
+    "@changesets/cli": "^2.26.1",
+    "@types/css": "^0.0.33",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.0",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  }
+}
